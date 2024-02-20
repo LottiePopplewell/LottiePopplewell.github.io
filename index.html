@@ -4,7 +4,8 @@ hello world
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orange and Pink Delight with Goldfish</title>
+    <title>Moving Buttons</title>
+     <title>Moving Polka Dots</title>
     <style>
         body {
             background-color: #ffc0cb; /* Pink background */
@@ -93,7 +94,20 @@ hello world
             margin-top: 20px;
         }
 
-        .button {
+        /* Moving button animation */
+        @keyframes moveButton {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(20px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .moving-button {
             display: inline-block;
             padding: 10px 20px;
             background-color: #ff7f50; /* Orange button background */
@@ -101,13 +115,14 @@ hello world
             text-decoration: none;
             border-radius: 5px;
             margin-right: 10px;
+            animation: moveButton 2s infinite; /* Infinite animation loop */
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Welcome to the Orange and Pink Delight</h1>
+        <h1>Welcome to the Moving Buttons</h1>
     </header>
 
     <nav>
@@ -121,13 +136,13 @@ hello world
     <main>
         <section>
             <h2>goldfish</h2>
-            <p>The goldfish is a freshwater fish in the family Cyprinidae of order Cypriniformes. It is commonly kept as a pet in indoor aquariums, and is one of the most popular aquarium fish. Goldfish released into the wild have become an invasive pest in parts of North America..</p>
+            <p>goldfish dont havve stomachs.</p>
             <!-- Goldfish image -->
             <img class="goldfish" src="https://www.publicdomainpictures.net/pictures/520000/velka/vintage-clipart-fisch-goldfisch.png" alt="Goldfish">
-            <!-- Buttons -->
+            <!-- Moving button -->
             <div class="button-container">
-                <a href="https://thegoldfishtank.com/goldfish-facts/" class="button">Visit Example.com</a>
-                <a href="https://example.org" class="button">Visit Example.org</a>
+                <a href="https://example.com" class="button moving-button">Visit Example.com</a>
+                <a href="https://example.org" class="button moving-button">Visit Example.org</a>
             </div>
         </section>
 
@@ -138,7 +153,7 @@ hello world
     </main>
 
     <footer>
-        <p>&copy; 2024 Orange and Pink Delight. All rights reserved.</p>
+        <p>&copy; 2024 Moving Buttons. All rights reserved.</p>
     </footer>
 
 </body>
