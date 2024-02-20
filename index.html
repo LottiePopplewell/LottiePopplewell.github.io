@@ -4,7 +4,7 @@ hello world
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colorful Website</title>
+    <title>Colorful Website with Bubbles and Butterflies</title>
     <style>
         body {
             background-color: #f0f0f0;
@@ -64,6 +64,18 @@ hello world
             bottom: 0;
             width: 100%;
         }
+
+        .bubbles {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .bubbles img,
+        .butterflies img {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
@@ -84,11 +96,21 @@ hello world
         <section>
             <h2>Section 1</h2>
             <p>This is the content of Section 1.</p>
+            <div class="bubbles">
+                <img src="https://via.placeholder.com/100x100.png?text=Bubble1" alt="Bubble 1">
+                <img src="https://via.placeholder.com/100x100.png?text=Bubble2" alt="Bubble 2">
+                <img src="https://via.placeholder.com/100x100.png?text=Bubble3" alt="Bubble 3">
+            </div>
         </section>
 
         <section>
             <h2>Section 2</h2>
             <p>This is the content of Section 2.</p>
+            <div class="butterflies">
+                <img src="https://via.placeholder.com/100x100.png?text=Butterfly1" alt="Butterfly 1">
+                <img src="https://via.placeholder.com/100x100.png?text=Butterfly2" alt="Butterfly 2">
+                <img src="https://via.placeholder.com/100x100.png?text=Butterfly3" alt="Butterfly 3">
+            </div>
         </section>
     </main>
 
