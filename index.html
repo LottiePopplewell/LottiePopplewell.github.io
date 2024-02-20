@@ -4,25 +4,25 @@ hello world
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colorful Website with Bubbles and Butterflies</title>
+    <title>Orange and Pink Delight</title>
     <style>
         body {
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: #ffc0cb; /* Pink background */
+            color: #ff7f50; /* Orange text */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #3498db;
+            background-color: #ff7f50; /* Orange header background */
             color: #fff;
             text-align: center;
             padding: 1em;
         }
 
         nav {
-            background-color: #2ecc71;
+            background-color: #ff69b4; /* Dark pink navigation background */
             padding: 0.5em;
         }
 
@@ -51,12 +51,12 @@ hello world
         section {
             margin-bottom: 20px;
             padding: 15px;
-            background-color: #ecf0f1;
+            background-color: #ffe4e1; /* Light pink section background */
             border-radius: 5px;
         }
 
         footer {
-            background-color: #34495e;
+            background-color: #ff7f50; /* Orange footer background */
             color: #fff;
             text-align: center;
             padding: 1em;
@@ -65,23 +65,24 @@ hello world
             width: 100%;
         }
 
-        .bubbles {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .bubbles img,
-        .butterflies img {
-            width: 100px;
-            height: 100px;
-            margin: 10px;
+        /* White polka dots */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(white 5%, transparent 5%);
+            background-size: 50px 50px;
+            z-index: -1;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Welcome to Your Colorful Website</h1>
+        <h1>Welcome to the Orange and Pink Delight</h1>
     </header>
 
     <nav>
@@ -96,26 +97,16 @@ hello world
         <section>
             <h2>Section 1</h2>
             <p>This is the content of Section 1.</p>
-            <div class="bubbles">
-                <img src="https://via.placeholder.com/100x100.png?text=Bubble1" alt="Bubble 1">
-                <img src="https://via.placeholder.com/100x100.png?text=Bubble2" alt="Bubble 2">
-                <img src="https://via.placeholder.com/100x100.png?text=Bubble3" alt="Bubble 3">
-            </div>
         </section>
 
         <section>
             <h2>Section 2</h2>
             <p>This is the content of Section 2.</p>
-            <div class="butterflies">
-                <img src="https://unsplash.com/photos/black-and-white-plane-flying-over-the-sea-during-daytime-rNqs9hM0U8I?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash" alt="Butterfly 1">
-                <img src="https://via.placeholder.com/100x100.png?text=Butterfly2" alt="Butterfly 2">
-                <img src="https://via.placeholder.com/100x100.png?text=Butterfly3" alt="Butterfly 3">
-            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Colorful Website. All rights reserved.</p>
+        <p>&copy; 2024 Orange and Pink Delight. All rights reserved.</p>
     </footer>
 
 </body>
