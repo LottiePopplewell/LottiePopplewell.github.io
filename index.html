@@ -1,36 +1,114 @@
 hello world
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.parallax {
-  /* The image used */
-  background-image: url("https://images.rawpixel.com/image_1100/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc0ODkyNS13aWtpbWVkaWEtaW1hZ2Utam9iNTcyLTIuanBn.jpg");
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New York City - Aesthetic Parallax</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #1a1a1a; /* Dark background color */
+      color: #fff; /* Light text color */
+    }
 
-  /* Set a specific height */
-  min-height: 500px; 
+    /* Parallax Container */
+    .parallax {
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      perspective: 1px;
+      transform-style: preserve-3d;
+      position: relative;
+      z-index: -1;
+    }
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-</style>
+    /* Parallax Layer Styles */
+    .parallax__layer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform-origin: center;
+      will-change: transform;
+      z-index: -1;
+    }
+
+    .parallax__layer--back {
+      transform: translateZ(-2px);
+      background-image: url('https://images.rawpixel.com/image_1100/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc0ODkyNS13aWtpbWVkaWEtaW1hZ2Utam9iNTcyLTIuanBn.jpg'); /* Replace with your image */
+      height: 120vh;
+    }
+
+    .parallax__layer--middle {
+      transform: translateZ(-1px);
+      background-image: url('https://images.rawpixel.com/image_1100/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc0ODkyNS13aWtpbWVkaWEtaW1hZ2Utam9iNTcyLTIuanBn.jpg'); /* Replace with your image */
+      height: 100vh;
+    }
+
+    .parallax__layer--front {
+      transform: translateZ(0);
+      background-image: url('https://images.rawpixel.com/image_1100/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc0ODkyNS13aWtpbWVkaWEtaW1hZ2Utam9iNTcyLTIuanBn.jpg'); /* Replace with your image */
+      height: 80vh;
+    }
+
+    /* Content Box at the Bottom */
+    .content-box {
+      background-color: #333; /* Darker background color for the content box */
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Text Styling */
+    h1, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+  </style>
 </head>
 <body>
 
-<p>Scroll Up and Down this page to see the parallax scrolling effect.</p>
+  <div class="parallax">
+    <!-- Back layer with a slower parallax scroll -->
+    <div class="parallax__layer parallax__layer--back"></div>
 
-<div class="parallax"></div>
+    <!-- Middle layer with a medium parallax scroll -->
+    <div class="parallax__layer parallax__layer--middle"></div>
 
-<div style="height:1000px;background-color:red;font-size:36px">
-Scroll Up and Down this page to see the parallax scrolling effect.
-This div is just here to enable scrolling.
-Tip: Try to remove the background-attachment property to remove the scrolling effect.
-</div>
+    <!-- Front layer with a faster parallax scroll -->
+    <div class="parallax__layer parallax__layer--front"></div>
+
+    <!-- Content Box at the Bottom -->
+    <div class="content-box">
+      <h1>New York City</h1>
+      <p>
+        Officially named the City of New York, is the most populous city in the United States,
+        and the most densely populated major city in North America. The city is at the center of
+        international finance, politics, entertainment, and culture, and is one of the world's major
+        global cities (along with London, Tokyo, and Paris) with a virtually unrivaled collection of
+        museums, galleries, performance venues, media outlets, international corporations, and stock exchanges.
+        The city is also home to the United Nations, along with all of the international missions associated with it.
+      </p>
+    </div>
+  </div>
 
 </body>
 </html>
-
