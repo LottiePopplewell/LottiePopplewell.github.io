@@ -17,24 +17,43 @@ hello world
 
     /* Style for the parallax effect */
     .parallax {
-      /* The image used */
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/79/2010-brown-bear.jpg'); /* Replace 'https://upload.wikimedia.org/wikipedia/commons/7/79/2010-brown-bear.jpg' with your image path */
       /* Full height */
       height: 100vh;
       /* Create the parallax scrolling effect */
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      /* Center and align content */
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      overflow-x: hidden;
+      overflow-y: auto;
+      perspective: 1px;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+    /* Style for the parallax layers */
+    .parallax__layer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    /* Individual image layers with different depths for parallax effect */
+    .parallax__layer--back {
+      transform: translateZ(-2px);
+    }
+
+    .parallax__layer--base {
+      transform: translateZ(0);
+    }
+
+    .parallax__layer--front {
+      transform: translateZ(2px);
     }
 
     /* Style for the content within the parallax section */
     .content {
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     /* Style for the buttons */
@@ -56,11 +75,24 @@ hello world
 <body>
 
   <div class="parallax">
-    <div class="content">
-      <h1>Welcome to the Parallax Website</h1>
-      <p>This is a simple parallax example with cream background and neutral colors.</p>
-      <button onclick="alert('Button Clicked!')">Click Me</button>
-      <button onclick="alert('Another Button Clicked!')">Another Button</button>
+    <!-- Back layer with a slower parallax scroll -->
+    <div class="parallax__layer parallax__layer--back">
+      <img src="https://images.rawpixel.com/image_1100/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc0ODkyNS13aWtpbWVkaWEtaW1hZ2Utam9iNTcyLTIuanBn.jpg" alt="https://images.rawpixel.com/image_1100/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc0ODkyNS13aWtpbWVkaWEtaW1hZ2Utam9iNTcyLTIuanBn.jpg">
+    </div>
+
+    <!-- Base layer (no parallax effect) -->
+    <div class="parallax__layer parallax__layer--base">
+      <div class="content">
+        <h1>Welcome to the Parallax Website</h1>
+        <p>This is a simple parallax example with a cream background and neutral colors.</p>
+        <button onclick="alert('Button Clicked!')">Click Me</button>
+        <button onclick="alert('Another Button Clicked!')">Another Button</button>
+      </div>
+    </div>
+
+    <!-- Front layer with a faster parallax scroll -->
+    <div class="parallax__layer parallax__layer--front">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Sample_of_black_and_white_photography.JPG" alt="Image 2">
     </div>
   </div>
 
