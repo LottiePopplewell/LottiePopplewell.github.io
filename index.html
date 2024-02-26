@@ -2,181 +2,69 @@ hello world
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>goldfish delight</title>
-    <title>Moving Buttons</title>
-     <title>Moving Polka Dots</title>
-    <style>
-        .parallax {
-  /* The image used */
-  background-image: url("file:///Users/cpop211/Downloads/IMG_8224.jpg");
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax with Cream Background and Neutral Colors</title>
+  <style>
+    /* Style for the cream background and neutral colors */
+    body {
+      background-color: #f5f5dc; /* Cream background color */
+      color: #333; /* Neutral text color */
+      font-family: Arial, sans-serif; /* Use any neutral font-family you prefer */
+      margin: 0;
+      padding: 0;
+    }
 
-  /* Set a specific height */
-  min-height: 500px;
+    /* Style for the parallax effect */
+    .parallax {
+      /* The image used */
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/79/2010-brown-bear.jpg'); /* Replace 'https://upload.wikimedia.org/wikipedia/commons/7/79/2010-brown-bear.jpg' with your image path */
+      /* Full height */
+      height: 100vh;
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* Center and align content */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-        body {
-            background-color: #ffc0cb; /* Red background */
-            color: #ff7f50; /* Orange text */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+    /* Style for the content within the parallax section */
+    .content {
+      text-align: center;
+    }
 
-        header {
-            background-color: #ff7f50; /* Orange header background */
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-        }
+    /* Style for the buttons */
+    button {
+      background-color: #ddd; /* Neutral button color */
+      color: #333; /* Neutral text color for buttons */
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      margin: 5px;
+    }
 
-        nav {
-            background-color: #ff69b4; /* Dark pink navigation background */
-            padding: 0.5em;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        nav li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        section {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #ffe4e1; /* Light pink section background */
-            border-radius: 5px;
-        }
-
-        footer {
-            background-color: #ff7f50; /* Orange footer background */
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* White polka dots */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: radial-gradient(white 5%, transparent 5%);
-            background-size: 50px 50px;
-            z-index: -1;
-        }
-
-        /* Goldfish image styling */
-        .goldfish {
-            display: block;
-            margin: 20px auto;
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        /* Button styling */
-        .button-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        /* Moving button animation */
-        @keyframes moveButton {
-            0% {
-                transform: translateX(0);
-            }
-            50% {
-                transform: translateX(20px);
-            }
-            100% {
-                transform: translateX(0);
-            }
-        }
-
-        .moving-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #ff7f50; /* Orange button background */
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-right: 10px;
-            animation: moveButton 2s infinite; /* Infinite animation loop */
-        }
-    </style>
+    button:hover {
+      background-color: #bbb; /* Darker color on hover */
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to the Moving Buttons</h1>
-    </header>
+  <div class="parallax">
+    <div class="content">
+      <h1>Welcome to the Parallax Website</h1>
+      <p>This is a simple parallax example with cream background and neutral colors.</p>
+      <button onclick="alert('Button Clicked!')">Click Me</button>
+      <button onclick="alert('Another Button Clicked!')">Another Button</button>
+    </div>
+  </div>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section>
-            <h2>goldfish</h2>
-            <p>goldfish dont havve stomachs.</p>
-            <!-- Goldfish image -->
-            <img class="goldfish" src="https://www.publicdomainpictures.net/pictures/520000/velka/vintage-clipart-fisch-goldfisch.png" alt="Goldfish">
-            <!-- Moving button -->
-            <div class="button-container">
-                <a href="https://example.com" class="button moving-button">Visit Example.com</a>
-                <a href="https://example.org" class="button moving-button">Visit Example.org</a>
-            </div>
-        </section>
-
-        <section>
-            <h2>Section 2</h2>
-            <p>This is the content of Section 2.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Moving Buttons. All rights reserved.</p>
-    </footer>
-   
-    <div class="parallax">
- <img class="goldfish" src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Air_Bubbles_in_Gel_%2849715545813%29.jpg" alt="Goldfish">
-   <img class="goldfish" src="https://images.rawpixel.com/image_1300/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3ljYmF0bXM1ODE0NC1pbWFnZV8xLmpwZw.jpg" alt="Goldfish">
-           
-   </div>
-
-
+  <!-- Other sections of your website go here -->
 
 </body>
 </html>
