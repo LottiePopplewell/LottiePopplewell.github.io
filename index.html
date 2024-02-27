@@ -1,109 +1,129 @@
-hello world
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hello - Aesthetic Parallax</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background-color: #1a1a1a; /* pink background color */
-      color: #fff; /* Light text color */
+  header {
+        background-color: #ff7f50; /* Orange header background */
+        color: #fff;
+        text-align: center;
+        padding: 1em;
     }
 
-    /* Parallax Container */
-    .parallax {
-      height: 100vh;
-      overflow-x: hidden;
-      overflow-y: auto;
-      perspective: 1px;
-      transform-style: preserve-3d;
-      position: relative;
-      z-index: -1;
+    nav {
+        background-color: #ff69b4; /* Dark pink navigation background */
+        padding: 0.5em;
     }
 
-    /* Parallax Layer Styles */
-    .parallax__layer {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      transform-origin: center;
-      will-change: transform;
-      z-index: -1;
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
     }
 
-    .parallax__layer--back {
-      transform: translateZ(-2px);
-      background-image: url('https://images.rawpixel.com/image_1100/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc0ODkyNS13aWtpbWVkaWEtaW1hZ2Utam9iNTcyLTIuanBn.jpg'); /* Replace with your image */
-      height: 120vh;
+    nav li {
+        display: inline;
+        margin-right: 20px;
     }
 
-    .parallax__layer--middle {
-      transform: translateZ(-1px);
-      background-image: url('https://images.rawpixel.com/image_1100/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc0ODkyNS13aWtpbWVkaWEtaW1hZ2Utam9iNTcyLTIuanBn.jpg'); /* Replace with your image */
-      height: 100vh;
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
     }
 
-    .parallax__layer--front {
-      transform: translateZ(0);
-      background-image: url('https://images.rawpixel.com/image_1100/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc0ODkyNS13aWtpbWVkaWEtaW1hZ2Utam9iNTcyLTIuanBn.jpg'); /* Replace with your image */
-      height: 80vh;
+    main {
+        padding: 20px;
     }
 
-    /* Content Box at the Bottom */
-    .content-box {
-      background-color: #333; /* Darker background color for the content box */
-      padding: 20px;
-      text-align: center;
+    section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #ffe4e1; /* Light pink section background */
+        border-radius: 5px;
     }
 
-    /* Text Styling */
-    h1, p {
-      margin: 0;
-      padding: 0;
+    footer {
+        background-color: #ff7f50; /* Orange footer background */
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
     }
 
-    h1 {
-      font-size: 2.5em;
+    /* White polka dots */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(white 5%, transparent 5%);
+        background-size: 50px 50px;
+        z-index: -1;
     }
 
-    p {
-      font-size: 1.2em;
+    /* Goldfish image styling */
+    .goldfish {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
     }
-  </style>
+
+    /* Button styling */
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ff7f50; /* Orange button background */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+</style>
 </head>
 <body>
 
-  <div class="parallax">
-    <!-- Back layer with a slower parallax scroll -->
-    <div class="https://images.rawpixel.com/image_1100/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc0ODkyNS13aWtpbWVkaWEtaW1hZ2Utam9iNTcyLTIuanBn.jpg"></div>
+```
+<header>
+    <h1>Welcome to the Orange and Pink Delight</h1>
+</header>
 
-    <!-- Middle layer with a medium parallax scroll -->
-    <div class="https://images.rawpixel.com/image_1100/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc0ODkyNS13aWtpbWVkaWEtaW1hZ2Utam9iNTcyLTIuanBn.jpg"></div>
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 
-    <!-- Front layer with a faster parallax scroll -->
-    <div class="https://images.rawpixel.com/image_1100/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc0ODkyNS13aWtpbWVkaWEtaW1hZ2Utam9iNTcyLTIuanBn.jpg"></div>
+<main>
+    <section>
+        <h2>Section 1</h2>
+        <p>This is the content of Section 1.</p>
+        <!-- Goldfish image -->
+        <img class="goldfish" src="<https://via.placeholder.com/400x300.png?text=Goldfish>" alt="Goldfish">
+        <!-- Buttons -->
+        <div class="button-container">
+            <a href="<https://example.com>" class="button">Visit Example.com</a>
+            <a href="<https://example.org>" class="button">Visit Example.org</a>
+        </div>
+    </section>
 
-    <!-- Content Box at the Bottom -->
-    <div class="content-box">
-      <h1>h e l l o</h1>
-      <p>
-        i m  t i r e d
-      </p>
-    </div>
-  </div>
+    <section>
+        <h2>Section 2</h2>
+        <p>This is the content of Section 2.</p>
+    </section>
+</main>
 
+<footer>
+    <p>&copy; 2024 Orange and Pink Delight. All rights reserved.</p>
+</footer>
 </body>
 </html>
