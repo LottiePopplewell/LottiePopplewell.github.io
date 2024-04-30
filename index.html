@@ -1,150 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<h1 style="background-color:MediumSeaGreen;">MediumSeaGreen</h1>
-<style>
-body {
-color: #ff7f50; /* Orange text */
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-}
-
-```
-    header {
-        background-color: #ff7f50; /* Orange header background */
-        color: #fff;
-        text-align: center;
-        padding: 1em;
-    }
-
-    nav {
-        background-color: #ff69b4; /* Dark pink navigation background */
-        padding: 0.5em;
-    }
-
-    nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-
-    nav li {
-        display: inline;
-        margin-right: 20px;
-    }
-
-    nav a {
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    section {
-        margin-bottom: 20px;
-        padding: 15px;
-        background-color: #ffe4e1; /* Light pink section background */
-        border-radius: 5px;
-    }
-
-    footer {
-        background-color: #ff7f50; /* Orange footer background */
-        color: #fff;
-        text-align: center;
-        padding: 1em;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-
-    /* White polka dots */
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: radial-gradient(white 5%, transparent 5%);
-        background-size: 50px 50px;
-        z-index: -1;
-    }
-
-    /* Goldfish image styling */
-    .goldfish {
-        display: block;
-        margin: 20px auto;
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-
-    /* Button styling */
-    .button-container {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #ff7f50; /* Orange button background */
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-right: 10px;
-    }
-</style>
-
-```
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Petals - Your Flower Shop</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>Pixel Petals</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-```
-<header>
-    <h1>Welcome to the Orange and Pink Delight</h1>
-</header>
+    <main>
+        <section class="hero">
+            <h2>Welcome to Pixel Petals</h2>
+            <p>Your destination for beautiful blooms!</p>
+        </section>
 
-<nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
+        <section class="products">
+            <h2>Our Products</h2>
+            <!-- Product cards go here -->
+        </section>
 
-<main>
-    <section>
-        <h2>Section 1</h2>
-        <p>This is the content of Section 1.</p>
-        <!-- Goldfish image -->
-        <img class="goldfish" src="<https://via.placeholder.com/400x300.png?text=Goldfish>" alt="Goldfish">
-        <!-- Buttons -->
-        <div class="button-container">
-            <a href="<https://example.com>" class="button">Visit Example.com</a>
-            <a href="<https://example.org>" class="button">Visit Example.org</a>
-        </div>
-    </section>
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Learn more about our flower shop...</p>
+        </section>
 
-    <section>
-        <h2>Section 2</h2>
-        <p>This is the content of Section 2.</p>
-    </section>
-</main>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us...</p>
+        </section>
+    </main>
 
-<footer>
-    <p>&copy; 2024 Orange and Pink Delight. All rights reserved.</p>
-</footer>
+    <footer>
+        <p>&copy; 2024 Pixel Petals. All rights reserved.</p>
+    </footer>
 
-```
-
+    <script src="script.js"></script>
 </body>
 </html>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Heiti TC", Arial, sans-serif; /* Update font family */
+    background-color: #f5f5f5; /* Neutral background color */
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-family: "Heiti TC", Arial, sans-serif; /* Update font family */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-family: "Heiti TC", Arial, sans-serif; /* Update font family */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-family: "Heiti TC", Arial, sans-serif; /* Update font family */
+}
