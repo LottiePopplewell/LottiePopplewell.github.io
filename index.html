@@ -2,12 +2,32 @@
 <html>
 <head>
 <title>Page Title</title>
+<style>
+  .container {
+    position: relative;
+    text-align: center;
+  }
+  .button {
+    position: absolute;
+    bottom: 10px; /* Adjust the bottom position as needed */
+    left: 10px; /* Adjust the left position as needed */
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  img {
+    max-width: 100%; /* Ensure the image does not exceed its container's width */
+  }
+</style>
 </head>
-<body style="background-color:Linen;text-align:center;">
-  <h1 style="font-family:verdana;color:Tomato;font-size: 300%;border: 2px solid olivedrab;">Pixel Petals</h1>
-  <p style="font-family:verdana;color:olivedrab;">Pixel Petal is an online platform for flower enthusiasts and individuals looking for inspiration and guidance for floral arrangements and gardening tips.</p>
-  
-  <!-- Set the width of the image to half the original size and center it -->
+<body style="background-color: Linen; text-align: center;">
+<h1 style="font-family: verdana; color: Tomato; font-size: 300%; border: 2px solid olivedrab;">Pixel Petals</h1>
+<p style="font-family: verdana; color: olivedrab;">Pixel Petal is an online platform for flower enthusiasts and individuals looking for inspiration and guidance for floral arrangements and gardening tips.</p>
+<div class="container">
   <img src="pixelpetalsfinal.png" style="width: 50%; display: block; margin: 0 auto;">
+  <a href="newpage.html"><button class="button">Go to New Page</button></a>
+</div>
 </body>
 </html>
